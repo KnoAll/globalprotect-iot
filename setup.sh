@@ -39,8 +39,8 @@ gpCert=cert_GP-DuckDNS.crt
 gpConfig=pangps.xml
 
 getFiles() {
-	mkdir gp
-	cd gp
+	mkdir ~/gp
+	cd ~/gp
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpPackage
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpCACert
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpCert
@@ -61,6 +61,10 @@ setupCerts() {
 	sudo dpkg-reconfigure ca-certificates
 }
 
+cleanupAfter() {
+	cd
+	rm -rf ~/gp
+}
 
 welcomeLooper() {
 case $1 in
@@ -78,7 +82,10 @@ case $1 in
 	;;
 	*)
 		welcomeMessage
-#		bash <(curl -s https://raw.githubusercontent.com/KnoAll/cacti-template/$branch/upgrade-cacti.sh) $1 $2
+		getFiles
+		setupInstall
+		setupCerts
+		cleanupAfter
 	;;
 esac
 }
