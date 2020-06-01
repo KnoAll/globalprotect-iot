@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#  bash <(curl -s https://raw.githubusercontent.com/KnoAll/globalprotect-iot/dev/setup.sh)
+#  bash <(curl -s https://raw.githubusercontent.com/KnoAll/globalprotect-iot/master/setup.sh)
 scriptver=v0.1
 green=$(tput setaf 2)
 red=$(tput setaf 1)
