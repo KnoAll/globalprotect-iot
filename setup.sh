@@ -37,18 +37,18 @@ welcomeMessage() {
 }
 
 branch=master
-gp-package=GlobalProtect_deb_arm-5.1.2.0-26.deb
-gp-ca-cert=cert_GP-DuckDNS-CA.crt
-gp-cert=cert_GP-DuckDNS.crt
-gp-config=pangps.xml
+gpPackage=GlobalProtect_deb_arm-5.1.2.0-26.deb
+gpCACert=cert_GP-DuckDNS-CA.crt
+gpCert=cert_GP-DuckDNS.crt
+gpConfig=pangps.xml
 
 getFiles() {
 	mkdir gp
 	cd gp
-	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gp-package
-	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gp-ca-cert
-	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gp-cert
-	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gp-config
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpPackage
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpCACert
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpCert
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpConfig
 }
 
 setupInstall() {
