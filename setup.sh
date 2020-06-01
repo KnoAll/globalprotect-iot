@@ -25,8 +25,6 @@ case $(whoami) in
 	pi)
 	;;
 	*)
-		printerror "Uh-oh. You are not logged in as the cacti user. Exiting..."
-		exit 1
 	;;
 esac
 
