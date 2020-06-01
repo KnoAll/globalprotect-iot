@@ -41,14 +41,14 @@ gpConfig=pangps.xml
 getFiles() {
 	mkdir ~/gp
 	cd ~/gp
-	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/*.deb
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpPackage
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpCACert
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpCert
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gpConfig
 }
 
 setupInstall() {
-	sudo dpkg -i $gp-package
+	sudo dpkg -i *.deb
 	sudo cp pangps.xml /opt/paloaltonetworks/globalprotect/
 }
 
