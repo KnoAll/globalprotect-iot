@@ -37,13 +37,18 @@ welcomeMessage() {
 }
 
 branch=master
+gp-package=GlobalProtect_deb_arm-5.1.2.0-26.deb
 
 getFiles() {
 	mkdir gp
 	cd gp
-	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/GlobalProtect_deb_arm-5.1.2.0-26.deb
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/$gp-package
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/cert_GP-DuckDNS-CA.crt
 	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/cert_GP-DuckDNS.crt
+}
+
+setupInstall() {
+	sudo dpkg -i $gp-package
 }
 
 welcomeLooper() {
