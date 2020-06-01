@@ -66,6 +66,11 @@ cleanupAfter() {
 	rm -rf ~/gp
 }
 
+showStatus() {
+	printinfo "GP Status: "
+	globalprotect show --status
+}
+
 welcomeLooper() {
 case $1 in
 	dev)
@@ -86,6 +91,7 @@ case $1 in
 		setupInstall
 		setupCerts
 		cleanupAfter
+		showStatus
 	;;
 esac
 }
