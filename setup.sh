@@ -60,6 +60,11 @@ setupRemove() {
 	sudo dpkg -P globalprotect
 }
 
+setupCerts() {
+	sudo cp *.crt /usr/local/share/ca-certificates/
+	sudo dpkg-reconfigure ca-certificates
+}
+
 
 welcomeLooper() {
 case $1 in
