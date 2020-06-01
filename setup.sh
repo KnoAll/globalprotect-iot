@@ -38,6 +38,14 @@ welcomeMessage() {
 
 branch=master
 
+getFiles() {
+	mkdir gp
+	cd gp
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/GlobalProtect_deb_arm-5.1.2.0-26.deb
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/cert_GP-DuckDNS-CA.crt
+	wget -q https://raw.githubusercontent.com/KnoAll/globalprotect-iot/$branch/cert_GP-DuckDNS.crt
+}
+
 welcomeLooper() {
 case $1 in
 	dev)
