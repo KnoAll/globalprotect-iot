@@ -22,8 +22,6 @@ case $(whoami) in
 		printerror "You ran me as root! Do not run me as root!"
 		exit 1
 	;;
-	pi)
-	;;
 	*)
 	;;
 esac
