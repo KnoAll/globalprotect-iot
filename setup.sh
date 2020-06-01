@@ -33,8 +33,7 @@ esac
 welcomeMessage() {
   echo -n "${tan}"
   echo -n "${reset}"
-  echo "Welcome to the Kevin's GlobalProtect IoT setup script!"
-  echo
+  printinfo "Welcome to the Kevin's GlobalProtect IoT setup script!"
 }
 
 branch=master
