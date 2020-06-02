@@ -33,7 +33,8 @@ welcomeMessage() {
 }
 
 branch=master
-gpPackage=GlobalProtect_deb_arm-5.1.2.0-26.deb
+#gpPackage=GlobalProtect_deb_arm-5.1.2.0-26.deb
+gpPackage=GlobalProtect_deb_arm-5.0.1.0-10.deb
 gpCACert=cert_GP-DuckDNS-CA.crt
 gpCert=cert_GP-DuckDNS.crt
 gpConfig=pangps.xml
