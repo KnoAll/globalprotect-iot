@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GlobalProtect>
+ <PanSetup>
+          <Portal></Portal>
+</PanSetup>
+ <PanGPS>
+ </PanGPS>
+ <Settings>
+         <portal-timeout>5</portal-timeout>
+         <connect-timeout>5</connect-timeout>
+         <receive-timeout>30</receive-timeout>
+         <os-type>IoT</os-type>
+         <head-less>yes</head-less>
+         <username></username>
+         <password></password>
+ </Settings>
+</GlobalProtect>
+^@
