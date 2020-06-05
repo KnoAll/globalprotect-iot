@@ -78,6 +78,11 @@ showStatus() {
 	globalprotect show --status
 }
 
+installVlock() {
+	sudo apt install -y vlock
+	sudo sed -i '$ a vlock -t 1' ~/.bashrc
+}
+
 welcomeLooper() {
 case $1 in
 	dev)
